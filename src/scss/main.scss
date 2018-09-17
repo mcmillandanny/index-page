@@ -37,94 +37,57 @@ $bp-desktop: 960px;
 }
 
 body {
+
 	background: #D4DEE8;
 	font-family: 'Jua', sans-serif;
 }
 
-header {
-	display: flex;
-	justify-content: space-between;
-	font-size: $h1-size;
-	background: $header-color;
 
-	h1, h2 {
-		margin: 10px;
-		color: $font-color-header;
+
+
+.info-box {
+	background: #FCAF58;
+	padding: 20px;
+	ul {
+		display: flex;
+		justify-content: space-between;
 	}
+	h1, h2, img{
+		color: #4E598C;
+		font-size: 20px;
+		padding-left: 10px;
+	
+	}
+	h2 {
+		padding-right: 30px;
+		font-size: 20px;
+	}
+
 }
 
-a {
-	text-decoration: none;
-	color: black;
-
-}
-
-
-
-/* 2. Content ================================= */
-
-
-
-.wrapper{
-	background: $background-box-color;
-	width: 370px;
+.classes {
 	text-align: center;
 	margin: auto;
+	display: flex;
+	flex-direction: row;
 
-	.class {
-		margin-top: 10px;
-		margin-bottom: 40px;
-		padding-top: 20px;
-		font-size: $a-size
+	.node {
+		background: red;
+		width: 50%;
 	}
-
-	.class:hover {
+	.motions {
+		background: blue;
+		width: 50%;
+	}
+	.vue {
+		background: yellow;
+		width: 50%;
+	}
+	.teams {
 		background: orange;
-	}
-	.webdev {
-		padding-bottom: 20px;
-	}
-
-}
-
-
-@include bp-desktop {
-
-	.wrapper {
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		height: 500px;
-
-		.class {
-			margin-top: 175px;
-			flex: 1;
-		}
-
-		.class:hover {
-			background: none;
-			animation: links-ani .7s;
-		}
-
-		@keyframes links-ani {
-			 0%, 20%, 60%, 100% {
-		    transform: translateY(0);
-		  	}
-
-		  	40% {
-		    transform: translateY(-20px);
-		  	}
-
-		  	80% {
-		    transform: translateY(-10px);
-		  	}
-		}
+		width: 50%;
 	}
 }
-
-
-
-
 
 
 
