@@ -1,0 +1,134 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+@import 'reset';
+
+$h1-size: 1.8rem;
+$header-color: #2D2930;
+$font-color-header: #3896B2;
+$background-box-color: #B9CFDF;
+$a-size: 2rem; 
+$bp-desktop: 960px;
+
+@mixin bp-desktop {
+		@media only screen and (min-width: $bp-desktop) {
+		@content;
+		}
+}
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #D4DEE8;
+	font-family: 'Jua', sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	font-size: $h1-size;
+	background: $header-color;
+
+	h1, h2 {
+		margin: 10px;
+		color: $font-color-header;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: black;
+
+}
+
+
+
+/* 2. Content ================================= */
+
+
+
+.wrapper{
+	background: $background-box-color;
+	width: 370px;
+	text-align: center;
+	margin: auto;
+
+	.class {
+		margin-top: 10px;
+		margin-bottom: 40px;
+		padding-top: 20px;
+		font-size: $a-size
+	}
+
+	.class:hover {
+		background: orange;
+	}
+	.webdev {
+		padding-bottom: 20px;
+	}
+
+}
+
+
+@include bp-desktop {
+
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 500px;
+
+		.class {
+			margin-top: 175px;
+			flex: 1;
+		}
+
+		.class:hover {
+			background: none;
+			animation: links-ani .7s;
+		}
+
+		@keyframes links-ani {
+			 0%, 20%, 60%, 100% {
+		    transform: translateY(0);
+		  	}
+
+		  	40% {
+		    transform: translateY(-20px);
+		  	}
+
+		  	80% {
+		    transform: translateY(-10px);
+		  	}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

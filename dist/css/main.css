@@ -1,0 +1,148 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #D4DEE8;
+	font-family: 'Jua', sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.8rem;
+	background: #2D2930;
+}
+
+header h1, header h2 {
+	margin: 10px;
+	color: #3896B2;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* 2. Content ================================= */
+.wrapper {
+	background: #B9CFDF;
+	width: 370px;
+	text-align: center;
+	margin: auto;
+}
+
+.wrapper .class {
+	margin-top: 10px;
+	margin-bottom: 40px;
+	padding-top: 20px;
+	font-size: 2rem;
+}
+
+.wrapper .class:hover {
+	background: orange;
+}
+
+.wrapper .webdev {
+	padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 960px) {
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 500px;
+	}
+	.wrapper .class {
+		margin-top: 175px;
+		flex: 1;
+	}
+	.wrapper .class:hover {
+		background: none;
+		animation: links-ani .7s;
+	}
+	@keyframes links-ani {
+		0%, 20%, 60%, 100% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(-20px);
+		}
+		80% {
+			transform: translateY(-10px);
+		}
+	}
+}
+
+/*# sourceMappingURL=main.css.map */
